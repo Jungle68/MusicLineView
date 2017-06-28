@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="MusicLineView">
+        <!--line color-->
+        <attr name="jungle68_line_color" format="color"/>
+        <!--anim is start-->
+        <attr name="jungle68_anim_is_start" format="boolean"/>
+    </declare-styleable>
+</resources>
