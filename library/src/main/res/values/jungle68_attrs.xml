@@ -3,7 +3,14 @@
     <declare-styleable name="MusicLineView">
         <!--line color-->
         <attr name="jungle68_line_color" format="color"/>
-        <!--anim is start-->
+        <!--anim is startAnim-->
         <attr name="jungle68_anim_is_start" format="boolean"/>
+        <!--line with-->
+        <attr name="jungle68_line_with" format="dimension"/>
+        <!--line spacing-->
+        <attr name="jungle68_line_spacing" format="dimension"/>
+        <!--line nums-->
+        <attr name="jungle68_line_nums" format="integer"/>
+
     </declare-styleable>
 </resources>
