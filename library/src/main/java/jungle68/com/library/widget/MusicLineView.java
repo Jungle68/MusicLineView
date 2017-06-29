@@ -39,7 +39,7 @@ public class MusicLineView extends View {
     /**
      * anim delay
      */
-    protected static final int DEFAULT_ANIM_DELAY = 800;
+    protected static final int DEFAULT_ANIM_DELAY = 100;
     /**
      * anim frequency
      */
@@ -211,7 +211,7 @@ public class MusicLineView extends View {
     protected void onAttachedToWindow() {
         super.onAttachedToWindow();
         if (mAnimIsStart) {
-            startAnim(DEFAULT_ANIM_DELAY);
+            startAnim();
         }
     }
 
@@ -221,13 +221,21 @@ public class MusicLineView extends View {
         stopAnim();
     }
 
-    public void startAnim(int delay) {
-        stopAnim();
-        handler.postDelayed(runnable, delay);
+    public void startAnim() {
+        mAnimIsStart = true;
+        handler.postDelayed(runnable, DEFAULT_ANIM_DELAY);
     }
 
     public void stopAnim() {
+        mAnimIsStart = false;
         handler.removeCallbacks(runnable);
     }
 
+    /**
+     * get current anim status
+     * @return
+     */
+    public boolean isAnimIsStart() {
+        return mAnimIsStart;
+    }
 }

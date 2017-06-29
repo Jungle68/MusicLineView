@@ -17,7 +17,11 @@ public class MainActivity extends AppCompatActivity {
         mMusicLineView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                if (mMusicLineView.isAnimIsStart()) {
+                    mMusicLineView.stopAnim();
+                }else {
+                    mMusicLineView.startAnim();
+                }
             }
         });
     }
