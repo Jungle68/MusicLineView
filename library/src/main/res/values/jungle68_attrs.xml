@@ -11,6 +11,9 @@
         <attr name="jungle68_line_spacing" format="dimension"/>
         <!--line nums-->
         <attr name="jungle68_line_nums" format="integer"/>
-
+        <!--max_line_height-->
+        <attr name="jungle68_max_line_height" format="dimension"/>
+        <!--max level-->
+        <attr name="jungle68_max_level" format="integer"/>
     </declare-styleable>
 </resources>

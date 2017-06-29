@@ -34,6 +34,7 @@ public class MusicLineView extends View {
     private static final int DEFAULT_LINE_SPACING = 20;
     private static final int DEFAULT_OFFSET_HEIGHT = 3;
     private static final int DEFAULT_MAX_LINE_HEIGHT = 100;
+    private static final int DEFAULT_MAX_LEVEL = 5;
     private static final boolean DEFAULT_ANIM_IS_START = true;
 
     /**
@@ -89,7 +90,7 @@ public class MusicLineView extends View {
     /**
      * max level
      */
-    protected int mMaxLevel = 5;
+    protected int mMaxLevel = DEFAULT_MAX_LEVEL;
 
     protected List<Line> mLines = new ArrayList<>();
 
@@ -133,6 +134,8 @@ public class MusicLineView extends View {
             mLineSpacing = array.getDimensionPixelOffset(R.styleable.MusicLineView_jungle68_line_with, DEFAULT_LINE_SPACING);
             mLineWith = array.getDimensionPixelOffset(R.styleable.MusicLineView_jungle68_line_spacing, DEFAULT_LINE_WITH);
             mLineNums = array.getInteger(R.styleable.MusicLineView_jungle68_line_nums, DEFAULT_LINE_NUMS);
+            mLineMaxHeight = array.getDimensionPixelOffset(R.styleable.MusicLineView_jungle68_max_line_height, DEFAULT_MAX_LINE_HEIGHT);
+            mMaxLevel = array.getInteger(R.styleable.MusicLineView_jungle68_max_level, DEFAULT_MAX_LEVEL);
             array.recycle();
         }
 
@@ -233,6 +236,7 @@ public class MusicLineView extends View {
 
     /**
      * get current anim status
+     *
      * @return
      */
     public boolean isAnimIsStart() {
